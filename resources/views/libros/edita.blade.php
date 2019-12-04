@@ -21,7 +21,7 @@
       	</div>
         <div class="row form-group">
           <div class="col-md-2"></div>
-          <div class="col-md-3"><label class="control-label">IdAutor</label></div>
+          <div class="col-md-3"><label class="control-label">Autor</label></div>
           <select id="IdAutor">
             @foreach($autor as $item)
               <option value="{{$item->IdAutor}}">{{$item->ApeAutor}} {{$item->NomAutor}}</option>
@@ -31,7 +31,7 @@
         </div>
         <div class="row form-group">
           <div class="col-md-2"></div>
-          <div class="col-md-3"><label class="control-label">IdEditorial</label></div>
+          <div class="col-md-3"><label class="control-label">Editorial</label></div>
           <select id="IdEditorial">
             @foreach($editorial as $item)
               <option value="{{$item->IdEditorial}}">{{$item->DesEditorial}}</option>
