@@ -22,21 +22,25 @@
         <div class="row form-group">
           <div class="col-md-2"></div>
           <div class="col-md-3"><label class="control-label">Autor</label></div>
-          <select id="IdAutor">
+          <div class="col-md-5">
+          <select id="IdAutor" class="form-control">
             @foreach($autor as $item)
               <option value="{{$item->IdAutor}}">{{$item->ApeAutor}} {{$item->NomAutor}}</option>
             @endforeach
           </select>
+          </div>
           <div class="col-md-2"></div>
         </div>
         <div class="row form-group">
           <div class="col-md-2"></div>
           <div class="col-md-3"><label class="control-label">Editorial</label></div>
-          <select id="IdEditorial">
+          <div class="col-md-5">
+          <select id="IdEditorial" class="form-control">
             @foreach($editorial as $item)
               <option value="{{$item->IdEditorial}}">{{$item->DesEditorial}}</option>
             @endforeach
           </select>
+          </div>
           <div class="col-md-2"></div>
         </div>        
       </div>
