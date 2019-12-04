@@ -29,7 +29,7 @@ Route::get('/a', function () {
 //Route::post('b', 'UsuariosController@store');
 
 
-//Route::get('/', 'ClienteController@index')->name('/');
+//Route::get('/', 'libroController@index')->name('/');
 Route::resource('/','UsuariosController');
 Route::resource('home','HomeController');
 Route::get('cliente.ver', 'ClienteController@ver')->name('cliente.ver');
@@ -40,6 +40,15 @@ Route::get('cliente.edita', 'ClienteController@edita')->name('cliente.edita');
 Route::post('cliente.editar', 'ClienteController@editar')->name('cliente.editar');
 Route::get('cliente.cambia_estado', 'ClienteController@cambia_estado')->name('cliente.cambia_estado');
 
+
+
+Route::get('libro.ver', 'LibroController@ver')->name('libro.ver');
+Route::get('libro.listar', 'LibroController@listar')->name('libro.listar');
+Route::get('libro.nuevo', 'LibroController@nuevo')->name('libro.nuevo');
+Route::post('libro.registrar', 'LibroController@registrar')->name('libro.registrar');
+Route::get('libro.edita', 'LibroController@edita')->name('libro.edita');
+Route::post('libro.editar', 'LibroController@editar')->name('libro.editar');
+Route::get('libro.cambia_estado', 'LibroController@cambia_estado')->name('libro.cambia_estado');
 
 
 
