@@ -8,7 +8,7 @@ use DB;
 class Libros extends Model{
     //    
     protected $table = 'libros';
-    protected $primaryKey = 'IdEditorial';
+    protected $primaryKey = 'CodLibro';
     public $timestamps = false;
 
     protected $fillable = [

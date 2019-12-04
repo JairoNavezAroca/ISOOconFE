@@ -43,22 +43,21 @@ class LibroController extends Controller
 	}
 	public function edita(Request $request)
 	{
-		return view('libros.edita',['libro' => Libros::find($request->get('cod'))]);
+		return view('libros.edita',['libro' => Libros::find($request->get('cod')),'autor' => Autor::all(), 'editorial' => Editorial::all()]);
 	}
 	public function editar(Request $request)
 	{
-		$cod = $request->get('cod');
-		$DNI = $request->get('DNI');
-		$Apellidos = $request->get('Apellidos');
-		$Nombres = $request->get('Nombres');
-		$Direccion = $request->get('Direccion');
-		$Fecha = $request->get('Fecha');
-		$c = Cliente::find($cod);
-		$c->dni = $DNI;
-		$c->apellidos = $Apellidos;
-		$c->nombres = $Nombres;
-		$c->direccion = $Direccion;
-		$c->fechanacimiento = $Fecha;
+
+		$CodLibro = $request->get('CodLibro');
+		$TitLibro = $request->get('TitLibro');
+		$AnoLibro = $request->get('AnoLibro');
+		$IdAutor = $request->get('IdAutor');
+		$IdEditorial = $request->get('IdEditorial');
+		$c = Libros::find($CodLibro);
+		$c->TitLibro = $TitLibro;
+		$c->AnoLibro = $AnoLibro;
+		$c->IdAutor = $IdAutor;
+		$c->IdEditorial = $IdEditorial;
 		$c->save();
 		return "Los datos se han modificado correctamente";
 	}
