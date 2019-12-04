@@ -43,7 +43,7 @@ class LibroController extends Controller
 	}
 	public function edita(Request $request)
 	{
-		return view('libros.edita',['cliente' => Cliente::find($request->get('cod'))]);
+		return view('libros.edita',['libro' => Libros::find($request->get('cod'))]);
 	}
 	public function editar(Request $request)
 	{

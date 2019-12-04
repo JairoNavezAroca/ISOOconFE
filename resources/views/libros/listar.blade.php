@@ -33,12 +33,14 @@
 						</td>
 						--}}
 						<td>
-							<button class="btn btn-warning" onclick="edita('{{$item->codigo}}')">Editar</button>
+							<button class="btn btn-warning" onclick="edita('{{$item->CodLibro}}')">Editar</button>
+							{{--
 							@if($item->usu_estado == 1)
-								<button class="btn btn-danger" onclick="cambia_estado('{{$item->codigo}}')">Deshablitar</button>
+								<button class="btn btn-danger" onclick="cambia_estado('{{$item->CodLibro}}')">Deshablitar</button>
 							@else
-								<button class="btn btn-success" onclick="cambia_estado('{{$item->codigo}}')">Hablititar</button>
+								<button class="btn btn-success" onclick="cambia_estado('{{$item->CodLibro}}')">Hablititar</button>
 							@endif
+							--}}
 						</td>
 					</tr>
 				@endforeach

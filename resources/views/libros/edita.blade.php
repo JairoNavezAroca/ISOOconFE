@@ -6,35 +6,35 @@
       <div class="modal-body">
       	<h3 class="text-center">Registrar Usuario</h3>
       	<br>
-        <input type="hidden" id="cod" value="{{$cliente->codigo}}">
+        <input type="hidden" id="cod" value="{{$libro->CodLibro}}">
       	<div class="row form-group">
       		<div class="col-md-2"></div>
       		<div class="col-md-3"><label class="control-label">DNI</label></div>
-      		<div class="col-md-5"><input type="text" id="DNI" class="form-control" value="{{$cliente->dni}}"></div>
+      		<div class="col-md-5"><input type="text" id="DNI" class="form-control" value="{{$libro->TitLibro}}"></div>
       		<div class="col-md-2"></div>
       	</div>
       	<div class="row form-group">
       		<div class="col-md-2"></div>
       		<div class="col-md-3"><label class="control-label">Apellidos</label></div>
-      		<div class="col-md-5"><input type="text" id="Apellidos" class="form-control" value="{{$cliente->apellidos}}"></div>
+      		<div class="col-md-5"><input type="text" id="Apellidos" class="form-control" value="{{$libro->AnoLibro}}"></div>
       		<div class="col-md-2"></div>
       	</div>
       	<div class="row form-group">
       		<div class="col-md-2"></div>
       		<div class="col-md-3"><label class="control-label">Nombres</label></div>
-      		<div class="col-md-5"><input type="text" id="Nombres" class="form-control" value="{{$cliente->nombres}}"></div>
+      		<div class="col-md-5"><input type="text" id="Nombres" class="form-control" value="{{$libro->nombres}}"></div>
       		<div class="col-md-2"></div>
       	</div>
       	<div class="row form-group">
       		<div class="col-md-2"></div>
       		<div class="col-md-3"><label class="control-label">Direccion</label></div>
-      		<div class="col-md-5"><input type="text" id="Direccion" class="form-control" value="{{$cliente->direccion}}"></div>
+      		<div class="col-md-5"><input type="text" id="Direccion" class="form-control" value="{{$libro->direccion}}"></div>
       		<div class="col-md-2"></div>
       	</div>
       	<div class="row form-group">
       		<div class="col-md-2"></div>
       		<div class="col-md-3"><label class="control-label">Fecha Nacimiento</label></div>
-      		<div class="col-md-5"><input type="date" id="Fecha" class="form-control" value="{{$cliente->fechanacimiento}}"></div>
+      		<div class="col-md-5"><input type="date" id="Fecha" class="form-control" value="{{$libro->fechanacimiento}}"></div>
       		<div class="col-md-2"></div>
       	</div>
       </div>
