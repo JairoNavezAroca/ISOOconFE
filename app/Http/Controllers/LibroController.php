@@ -69,6 +69,20 @@ class LibroController extends Controller
 	}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public function cambia_estado(Request $request)
 	{
 		$cod = $request->get('cod');
