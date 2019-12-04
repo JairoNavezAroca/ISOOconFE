@@ -21,8 +21,24 @@
 						<td>{{$item->CodLibro}}</td>
 						<td>{{$item->TitLibro}}</td>
 						<td>{{$item->AnoLibro}}</td>
-						<td>{{$item->IdAutor}}</td>
-						<td>{{$item->IdEditorial}}</td>
+						<td>
+							<?php 
+								foreach ($autor as $itm) {
+									if ($item->IdAutor == $itm->IdAutor)
+										echo $itm->ApeAutor.' '.$itm->NomAutor;
+								}
+
+							 ?>
+						</td>
+						<td>
+							<?php 
+								foreach ($editorial as $itm) {
+									if ($item->IdEditorial == $itm->IdEditorial)
+										echo $itm->DesEditorial;
+								}
+
+							 ?>
+						</td>
 						{{--
 						<td>
 							@if($item->usu_estado == 1)

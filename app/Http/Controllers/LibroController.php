@@ -19,7 +19,7 @@ class LibroController extends Controller
 	}
 	public function listar()
 	{
-		return view('libros.listar', ['libros' => Libros::all()]);
+		return view('libros.listar', ['libros' => Libros::all(),'autor' => Autor::all(), 'editorial' => Editorial::all()]);
 	}
 	public function nuevo()
 	{
