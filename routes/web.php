@@ -49,6 +49,7 @@ Route::post('libro.registrar', 'LibroController@registrar')->name('libro.registr
 Route::get('libro.edita', 'LibroController@edita')->name('libro.edita');
 Route::post('libro.editar', 'LibroController@editar')->name('libro.editar');
 Route::get('libro.cambia_estado', 'LibroController@cambia_estado')->name('libro.cambia_estado');
+Route::get('libro.eliminar', 'LibroController@eliminar')->name('libro.eliminar');
 
 
 

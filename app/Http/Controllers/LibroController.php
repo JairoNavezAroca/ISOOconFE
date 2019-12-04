@@ -61,6 +61,14 @@ class LibroController extends Controller
 		$c->save();
 		return "Los datos se han modificado correctamente";
 	}
+
+	public function eliminar(Request $request){
+		$id = $request->get('id');
+		Libros::find($id)->delete();
+		return $this::ver();
+	}
+
+
 	public function cambia_estado(Request $request)
 	{
 		$cod = $request->get('cod');

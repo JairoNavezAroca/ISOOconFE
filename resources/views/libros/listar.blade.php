@@ -50,6 +50,7 @@
 						--}}
 						<td>
 							<button class="btn btn-warning" onclick="edita('{{$item->CodLibro}}')">Editar</button>
+							<a href="{{route('libro.eliminar')}}?id={{$item->CodLibro}}" class="btn btn-danger">Eliminar</a>
 							{{--
 							@if($item->usu_estado == 1)
 								<button class="btn btn-danger" onclick="cambia_estado('{{$item->CodLibro}}')">Deshablitar</button>
