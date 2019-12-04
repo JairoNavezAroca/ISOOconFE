@@ -39,7 +39,7 @@
           <div class="col-md-3"><label class="control-label">IdEditorial</label></div>
           <select id="IdEditorial">
             @foreach($editorial as $item)
-              <option value="{{$item->IdEditorial}}">{{$item->ApeAutor}} {{$item->NomAutor}}</option>
+              <option value="{{$item->IdEditorial}}">{{$item->DesEditorial}}</option>
             @endforeach
           </select>
           <div class="col-md-2"></div>

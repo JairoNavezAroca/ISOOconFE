@@ -27,35 +27,11 @@ class LibroController extends Controller
 	}
 	public function registrar(Request $request)
 	{
-        $validator = Validator::make($request->all(), [
-			'DNI' => 'required|min:4',
-			'Apellidos' => 'required|min:4',
-			'Nombres' => 'required|min:4',
-			'Direccion' => 'required|min:4',
-			'Fecha' => 'required'
-        ]);
-        if ($validator->fails()) {
-        	return 'El sabado go barrio! 8-)';
-            return redirect('product/create')
-                        ->withErrors($validator)
-                        ->withInput();
-        }
-        /*
-			$DNI = $request->get('DNI');
-			$Apellidos = $request->get('Apellidos');
-			$Nombres = $request->get('Nombres');
-			$Direccion = $request->get('Direccion');
-			$Fecha = $request->get('Fecha');
-			if(strlen($DNI) < 4)
-				return "campo DNI muy corto";
-			if(strlen($Apellidos) < 4)
-				return "campo Apellidos muy corto";
-			if(strlen($Nombres) < 4)
-				return "campo Nombres muy corto";
-			if(strlen($Direccion) < 4)
-				return "campo Direccion muy corto";
-			if(strlen($Fecha) == null)
-				return "campo Fecha no ingresado";*/
+		$CodLibro = $request->get('CodLibro');
+		$TitLibro = $request->get('TitLibro');
+		$AnoLibro = $request->get('AnoLibro');
+		$IdAutor = $request->get('IdAutor');
+		$IdEditorial = $request->get('IdEditorial');
 		Cliente::create([
 			'dni' => $DNI,
 			'apellidos' => $Apellidos,
