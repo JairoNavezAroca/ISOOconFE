@@ -1,0 +1,81 @@
+.acceso-directo{
+	width: 230px;
+	display: inline-block;
+	margin: 10px;
+}
+
+.acceso-directo > .panel-acceso-directo{
+	height: 60px;
+    margin: 5px 5px 0 0;
+    
+    background-color: #FFF !important;
+    display: block !important;
+    color: #646464 !important;
+    text-shadow: none !important;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+	display: block !important;
+}
+
+.acceso-directo > .panel-acceso-directo-naranja{
+	border: 1px solid #ed4e2a;
+}
+
+.acceso-directo > .panel-acceso-directo-celeste{
+	border: 1px solid #2196f3;
+}
+
+.acceso-directo > .panel-acceso-directo-azul{
+	border: 1px solid #3f51b5;
+}
+
+.acceso-directo > .panel-acceso-directo-morado{
+	border: 1px solid #9c27b0;
+}
+
+.acceso-directo > .panel-acceso-directo:hover{
+	box-shadow: 1px 1px 5px !important;
+	text-decoration: none;
+}
+
+.acceso-directo > .panel-acceso-directo > .icono{
+	position: absolute;
+    width: 50px;
+}
+
+.acceso-directo > .panel-acceso-directo > .icono > span{
+	font-size: 35px;
+    padding: 25px 15px 20px 15px;
+    color: #FFF;
+    border-radius: 3px 0 0 3px;
+    margin-top: -1px;
+}
+
+.acceso-directo > .panel-acceso-directo > .icono > .naranja{
+	background-color: #ed4e2a;
+}
+
+.acceso-directo > .panel-acceso-directo > .icono > .celeste{
+	background-color: #2196f3;
+}
+
+.acceso-directo > .panel-acceso-directo > .icono > .azul{
+	background-color: #3f51b5;
+}
+
+.acceso-directo > .panel-acceso-directo > .icono > .morado{
+	background-color: #9c27b0;
+}
+
+.acceso-directo > .panel-acceso-directo > div> .texto{
+	margin: 21px;
+    padding-left: 45px;
+}
+
+.panel-blanco-centrado{
+	text-align: center;
+    background: #fbfbfb;
+}
+
