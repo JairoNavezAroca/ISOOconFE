@@ -8,34 +8,42 @@
       	<br>
       	<div class="row form-group">
       		<div class="col-md-2"></div>
-      		<div class="col-md-3"><label class="control-label">DNI</label></div>
-      		<div class="col-md-5"><input type="text" id="DNI" class="form-control"></div>
+      		<div class="col-md-3"><label class="control-label">CodLibro</label></div>
+      		<div class="col-md-5"><input type="text" id="CodLibro" class="form-control"></div>
       		<div class="col-md-2"></div>
       	</div>
       	<div class="row form-group">
       		<div class="col-md-2"></div>
-      		<div class="col-md-3"><label class="control-label">Apellidos</label></div>
-      		<div class="col-md-5"><input type="text" id="Apellidos" class="form-control"></div>
+      		<div class="col-md-3"><label class="control-label">TitLibro</label></div>
+      		<div class="col-md-5"><input type="text" id="TitLibro" class="form-control"></div>
       		<div class="col-md-2"></div>
       	</div>
       	<div class="row form-group">
       		<div class="col-md-2"></div>
-      		<div class="col-md-3"><label class="control-label">Nombres</label></div>
-      		<div class="col-md-5"><input type="text" id="Nombres" class="form-control"></div>
+      		<div class="col-md-3"><label class="control-label">AnoLibro</label></div>
+      		<div class="col-md-5"><input type="text" id="AnoLibro" class="form-control"></div>
       		<div class="col-md-2"></div>
       	</div>
-      	<div class="row form-group">
-      		<div class="col-md-2"></div>
-      		<div class="col-md-3"><label class="control-label">Direccion</label></div>
-      		<div class="col-md-5"><input type="text" id="Direccion" class="form-control"></div>
-      		<div class="col-md-2"></div>
-      	</div>
-      	<div class="row form-group">
-      		<div class="col-md-2"></div>
-      		<div class="col-md-3"><label class="control-label">Fecha Nacimiento</label></div>
-      		<div class="col-md-5"><input type="date" id="Fecha" class="form-control"></div>
-      		<div class="col-md-2"></div>
-      	</div>
+        <div class="row form-group">
+          <div class="col-md-2"></div>
+          <div class="col-md-3"><label class="control-label">IdAutor</label></div>
+          <select id="IdAutor">
+            @foreach($autor as $item)
+              <option value="{{$item->IdAutor}}">{{$item->ApeAutor}} {{$item->NomAutor}}</option>
+            @endforeach
+          </select>
+          <div class="col-md-2"></div>
+        </div>
+        <div class="row form-group">
+          <div class="col-md-2"></div>
+          <div class="col-md-3"><label class="control-label">IdEditorial</label></div>
+          <select id="IdEditorial">
+            @foreach($editorial as $item)
+              <option value="{{$item->IdEditorial}}">{{$item->ApeAutor}} {{$item->NomAutor}}</option>
+            @endforeach
+          </select>
+          <div class="col-md-2"></div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal" onclick="registrar()">Registrar</button>
@@ -47,20 +55,20 @@
 <script type="text/javascript">
 	$("#miModal").modal("show");
 	function registrar(){
-		var DNI = $('#DNI').val();
-		var Apellidos = $('#Apellidos').val();
-		var Nombres = $('#Nombres').val();
-		var Direccion = $('#Direccion').val();
-		var Fecha = $('#Fecha').val();
+		var CodLibro = $('#CodLibro').val();
+		var TitLibro = $('#TitLibro').val();
+		var AnoLibro = $('#AnoLibro').val();
+		var IdAutor = $('#IdAutor').val();
+		var IdEditorial = $('#IdEditorial').val();
 		$.ajax({
-			url: "{{route('cliente.registrar')}}",
+			url: "{{route('libro.registrar')}}",
 			method: "POST",
-			data: {DNI:DNI,Apellidos:Apellidos,Nombres:Nombres,Direccion:Direccion,Fecha:Fecha},
+			data: {CodLibro:CodLibro,TitLibro:TitLibro,AnoLibro:AnoLibro,IdAutor:IdAutor,IdEditorial:IdEditorial},
 			async: true,
 			dataType: "HTML",
 			success: function (data) {
 				alert(data);
-				fn("#tabla","{{route('cliente.listar')}}");
+				fn("#tabla","{{route('libro.listar')}}");
 			},
 			beforeSend: function () {
 				/*

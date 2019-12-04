@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Http\Controllers\Redirect;
-use App\Libro;
+use App\Libros;
+use App\Autor;
+use App\Editorial;
 
 use Illuminate\Support\Facades\Validator;
 class LibroController extends Controller
@@ -17,11 +19,11 @@ class LibroController extends Controller
 	}
 	public function listar()
 	{
-		return view('libros.listar',['clientes' => Cliente::all()]);
+		return view('libros.listar', ['libros' => Libros::all()]);
 	}
 	public function nuevo()
 	{
-		return view('libros.nuevo');
+		return view('libros.nuevo', ['autor' => Autor::all(), 'editorial' => Editorial::all()]);
 	}
 	public function registrar(Request $request)
 	{

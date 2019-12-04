@@ -55,14 +55,14 @@
     var Fecha = $('#Fecha').val();
     var cod = $('#cod').val();
 		$.ajax({
-			url: "{{route('cliente.editar')}}",
+			url: "{{route('libro.editar')}}",
 			method: "POST",
 			data: {cod:cod,DNI:DNI,Apellidos:Apellidos,Nombres:Nombres,Direccion:Direccion,Fecha:Fecha},
 			async: true,
 			dataType: "HTML",
 			success: function (data) {
 				alert(data);
-				fn("#tabla","{{route('cliente.listar')}}");
+				fn("#tabla","{{route('libro.listar')}}");
 			},
 			beforeSend: function () {
 				/*

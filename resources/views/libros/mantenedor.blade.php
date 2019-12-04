@@ -43,7 +43,7 @@
 @section('content')
 	<br><br>
 	<center>
-		<h3>Lista de Clientes</h3>
+		<h3>Lista de Libros</h3>
 		<div id="loader" hidden="">
 			<div class="spinner-border text-primary"></div>
 		</div>
@@ -57,9 +57,9 @@
 @stop
 @section('abajo')
 <script type="text/javascript">
-	fn("#tabla","{{route('cliente.listar')}}");
+	fn("#tabla","{{route('libro.listar')}}");
 	function nuevo(){
-		fn("#modal","{{route('cliente.nuevo')}}");
+		fn("#modal","{{route('libro.nuevo')}}");
 	}
 	function fn(campo,pagina,datos){
 		$.ajax({

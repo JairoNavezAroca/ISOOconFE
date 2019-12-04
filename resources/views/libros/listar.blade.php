@@ -18,7 +18,7 @@
 				</tr>
 			</thead>
 			<tbody> 
-				@foreach($clientes as $item)
+				@foreach($libros as $item)
 					<tr>
 						<td>{{$item->codigo}}</td>
 						<td>{{$item->dni}}</td>
@@ -51,19 +51,19 @@
 <script type="text/javascript">
 	function edita(cod){
 		var datos = {cod:cod}
-		fn("#modal","{{route('cliente.edita')}}",datos);
+		fn("#modal","{{route('libro.edita')}}",datos);
 	}
 	function cambia_estado(cod){
 		var datos = {cod:cod}
 		$.ajax({
-			url: "{{route('cliente.cambia_estado')}}",
+			url: "{{route('libro.cambia_estado')}}",
 			method: "get",
 			data: datos,
 			async: true,
 			dataType: "HTML",
 			success: function (data) {
 				alert(data);
-				fn("#tabla","{{route('cliente.listar')}}");
+				fn("#tabla","{{route('libro.listar')}}");
 			},
 			beforeSend: function () {
 				/*
