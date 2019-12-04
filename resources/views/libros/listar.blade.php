@@ -7,25 +7,23 @@
 		<table id="datatable" class="table table-striped table-bordered">
 			<thead>
 				<tr>
-					<th>codigo</th>
-					<th>dni</th>
-					<th>apellidos</th>
-					<th>nombres</th>
-					<th>direccion</th>
-					<th>fechanacimiento</th>
-					<th>usu_estado</th>
+					<th>CodLibro</th>
+					<th>TitLibro</th>
+					<th>AñoLibro</th>
+					<th>Autor</th>
+					<th>IdEditorial</th>
 					<th>opciones</th>
 				</tr>
 			</thead>
 			<tbody> 
 				@foreach($libros as $item)
 					<tr>
-						<td>{{$item->codigo}}</td>
-						<td>{{$item->dni}}</td>
-						<td>{{$item->apellidos}}</td>
-						<td>{{$item->nombres}}</td>
-						<td>{{$item->direccion}}</td>
-						<td>{{$item->fechanacimiento}}</td>
+						<td>{{$item->CodLibro}}</td>
+						<td>{{$item->TitLibro}}</td>
+						<td>{{$item->AnoLibro}}</td>
+						<td>{{$item->IdAutor}}</td>
+						<td>{{$item->IdEditorial}}</td>
+						{{--
 						<td>
 							@if($item->usu_estado == 1)
 								Habilitado
@@ -33,6 +31,7 @@
 								Deshabilitado
 							@endif
 						</td>
+						--}}
 						<td>
 							<button class="btn btn-warning" onclick="edita('{{$item->codigo}}')">Editar</button>
 							@if($item->usu_estado == 1)

@@ -7,7 +7,7 @@ use DB;
 
 class Libros extends Model{
     //    
-    protected $table = 'editorial';
+    protected $table = 'libros';
     protected $primaryKey = 'IdEditorial';
     public $timestamps = false;
 
