@@ -32,13 +32,12 @@ class LibroController extends Controller
 		$AnoLibro = $request->get('AnoLibro');
 		$IdAutor = $request->get('IdAutor');
 		$IdEditorial = $request->get('IdEditorial');
-		Cliente::create([
-			'dni' => $DNI,
-			'apellidos' => $Apellidos,
-			'nombres' => $Nombres,
-			'direccion' => $Direccion,
-			'fechanacimiento' => $Fecha,
-			'usu_estado' => true
+		Libros::create([
+			'CodLibro' => $CodLibro,
+			'TitLibro' => $TitLibro,
+			'AnoLibro' => $AnoLibro,
+			'IdAutor' => $IdAutor,
+			'IdEditorial' => $IdEditorial
 		]);
 		return "Los datos se han registrado correctamente";
 	}
